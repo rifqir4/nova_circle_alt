@@ -1,0 +1,3 @@
+class AppGradients {
+  AppGradients._();
+}

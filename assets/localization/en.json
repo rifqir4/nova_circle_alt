@@ -1,0 +1,132 @@
+{
+  "appTitle": "Nova Circle",
+  "lists": {
+    "listsTitle": "Users Lists"
+  },
+  "authentication": {
+    "login": {
+      "userDeactivated": "This user is suspended!"
+    }
+  },
+  "reportTypes": {
+    "spam": "Spam",
+    "inappropriate": "Inappropriate",
+    "incorrect_representation": "Incorrect representation",
+    "impersonification": "Impersonification",
+    "abuse": "Abuse"
+  },
+  "report": {
+    "recommendation_success": "Recommendation reported!",
+    "desc_title": "Please provide additional information that can be helpful to our compliance team",
+    "success_message": "Thank you for the report.\n Our team will look into it as soon as\npossible.",
+    "error_message": "Reporting failed."
+  },
+  "list" : {
+    "myList": "My List",
+    "listTitle": "List title",
+    "listDescription": "List description (optional)",
+    "whoCanSee": "Who can see my list",
+    "addingNewList": "Adding new list...",
+    "public": "Public",
+    "private": "Private",
+    "myCircle": "My Circle",
+    "addCoverImage": "Add cover image",
+    "editCoverImage": "Edit cover image",
+    "cropImage": "Crop Image",
+    "shareList": "Share list",
+    "listEmpty": "The list is empty.",
+    "yourListEmpty": "Your list is empty.",
+    "createNewList": "+ Create new list"
+  },
+  "profile": {
+    "editAccount": "Edit account",
+    "makeChanges": "Make changes on an account and continue discovering new destinations",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "bio": "Bio",
+    "editProfile": "Edit profile",
+    "followers": "followers",
+    "following": "following",
+    "shareProfile": "Share profile",
+    "profileReportedSuccessfully": "Your report has been received. We’ll email you with the resolution.",
+    "profileDeleteConfirmation": "Are you sure you want to delete your account? \nThis can't be undone.",
+    "yesIWantToDeleteAccount": "Yes, I want to delete my account",
+    "deleteAccount": "Delete account",
+    "accountDeleteRequestSent": "You request has been sent. Your account will be deleted in the next 30 days.",
+    "sorryToSeeYouLeave": "We are sorry to see you leave."
+  },
+  "settings": {
+    "applicationSettings": "Application settings",
+    "supportCenter": "Support center",
+    "termsAndConditions": "Terms and conditions",
+    "privacyPolicy": "Privacy and policy",
+    "signOut": "Sign out",
+    "appVersion": "App Version",
+    "codeVersion": "Code Version"
+  },
+  "common": {
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "enterText": "Enter Text",
+    "send": "Send",
+    "continue": "Continue",
+    "start": "Start",
+    "congratulations": "Congratulations!",
+    "done": "Done",
+    "noMoreThan{0}CharactersAllowed" :"No more than {0} characters allowed."
+  },
+  "errors": {
+    "errorOccurred": "An Error occurred.",
+    "checkInternetConnection": "Please check your internet connection and try again",
+    "noEmailAppInstalled": "No e-mail app installed."
+  },
+  "phone": {
+    "pleaseEnterValidNumber": "Please enter a valid number",
+    "phoneNumberVerified": "Phone number verified",
+    "yourPhoneNumberHasAlreadyBeenVerified": "Your phone number has already been verified.",
+    "codeNotValid": "Code is not valid or is not the latest one.",
+    "pleaseEnterYourCode": "Please enter your code."
+  },
+  "apiErrorCodes": {
+    "400": "Bad Request",
+    "401":  "Unauthorised",
+    "404":  "Not Found",
+    "1001":  "Undefined Route",
+    "1002":  "Handler not valid",
+    "1003":  "Handler type not valid",
+    "1004": "Database not connected",
+    "1005":  "Database query error",
+    "1006": "Entity request can't be processed",
+    "1007": "Entity response can't be processed",
+    "2001": "User not found",
+    "2002": "Role not found",
+    "2003": "User already exists",
+    "2004": "User credentials invalid",
+    "2005": "Spot already exists",
+    "2006": "List is not owned by user",
+    "2007": "Refresh token not found",
+    "2008": "List not found",
+    "2009": "User status invalid",
+    "2010": "user report nothing to report",
+    "2011": "User report missing",
+    "2012": "User has already spotlighted list",
+    "2013": "List has recommendations",
+    "2014": "Recommendation is not owned by user",
+    "2015": "User report missing recommendation",
+    "2016": "User report missing list",
+    "2017": "User report missing reported user",
+    "2018": "User report update after resolved",
+    "2019": "Recommendation not found",
+    "2020": "User can't follow self",
+    "2021": "Recommendation missing country or city",
+    "2022": "Recommendation spot id not valid",
+    "2023": "Username already exists",
+    "2024": "Budget ID Invalid",
+    "2025": "City not found",
+    "2026": "List not owned by user and my circle",
+    "2027": "Recommendation not owned by user and private",
+    "2028": "Recommendation not owned by user and my circle"
+  }
+}
