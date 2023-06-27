@@ -21,6 +21,15 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static final subtitle = primary.copyWith(
+    fontSize: 18.sp,
+    color: AppColors.textTitle,
+  );
+
+  static final subtitleBold = subtitle.copyWith(
+    fontWeight: FontWeight.w700,
+  );
+
   static final body1 = primary.copyWith(
     fontSize: 16.sp,
   );
@@ -41,7 +50,16 @@ class AppTextStyles {
     fontSize: 14.sp,
     height: 1.2,
   );
+
   static final body2Bold = body2.copyWith(
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.bold,
+  );
+
+  static final body3 = primary.copyWith(
+    fontSize: 12.sp,
+    height: 1.2,
+  );
+  static final body3Bold = body3.copyWith(
+    fontWeight: FontWeight.bold,
   );
 }

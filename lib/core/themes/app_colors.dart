@@ -19,4 +19,5 @@ class AppColors {
   static const Color background = greyLightest;
   static const Color textTitle = greyDarkest;
   static const Color text = greyDarker;
+  static Color modalOverlay = blueSky.withOpacity(0.75);
 }

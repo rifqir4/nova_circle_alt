@@ -28,6 +28,14 @@ class AppRouter {
         return AppScreens.verifyPhone();
       case AppRoutes.verifyOtp:
         return AppScreens.verifyOtp();
+      case AppRoutes.contactPermission:
+        return AppScreens.contactPermission();
+      case AppRoutes.contactSync:
+        return AppScreens.contactSync();
+      case AppRoutes.contentPrefer:
+        return AppScreens.contentPreffer();
+      case AppRoutes.budgetSelection:
+        return AppScreens.budgetSelection();
       case AppRoutes.home:
         return AppScreens.home(settings);
       default:

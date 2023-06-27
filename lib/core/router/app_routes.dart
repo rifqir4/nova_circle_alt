@@ -14,4 +14,8 @@ class AppRoutes {
   static const String agreement = '/onboarding/agreement';
   static const String verifyPhone = '/onboarding/verify/phone';
   static const String verifyOtp = '/onboarding/verify/otp';
+  static const String contactPermission = '/onboarding/contact/permission';
+  static const String contactSync = '/onboarding/contact/sync';
+  static const String contentPrefer = '/onboarding/content/prefer';
+  static const String budgetSelection = '/onboarding/budget-selection';
 }

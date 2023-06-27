@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nova_circle_alt/features/onboarding/verify_phone/presentation/verify_phone_cubit.dart';
+import 'package:nova_circle_alt/features/onboarding/budget_selection/budget_selection_screen.dart';
 
 import '../../features/onboarding/agreement/agreement_screen.dart';
 import '../../features/auth/auth_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/intro/intro_screen.dart';
+import '../../features/onboarding/contact_permission/contact_permission_screen.dart';
+import '../../features/onboarding/contact_sync/contact_sync_screen.dart';
+import '../../features/onboarding/content_prefer/content_prefer_screen.dart';
 import '../../features/onboarding/verify_otp/verify_otp_cubit.dart';
 import '../../features/onboarding/verify_otp/verify_otp_screen.dart';
+import '../../features/onboarding/verify_phone/presentation/verify_phone_cubit.dart';
 import '../../features/onboarding/verify_phone/presentation/verify_phone_screen.dart';
 import '../../features/splash/splash_screen.dart';
 import '../../shared/screens/error_404_screen.dart';
@@ -61,6 +65,22 @@ class AppScreens {
         builder: (_) => BlocProvider(
             create: (context) => VerifyOtpCubit(),
             child: const VerifyOtpScreen()));
+  }
+
+  static Route<dynamic> contactPermission() {
+    return MaterialPageRoute(builder: (_) => const ContactPermissionScreen());
+  }
+
+  static Route<dynamic> contactSync() {
+    return MaterialPageRoute(builder: (_) => const ContactSyncScreen());
+  }
+
+  static Route<dynamic> contentPreffer() {
+    return MaterialPageRoute(builder: (_) => const ContentPreferScreen());
+  }
+
+  static Route<dynamic> budgetSelection() {
+    return MaterialPageRoute(builder: (_) => const BudgetSelectionScreen());
   }
 
   static Route<dynamic> home(RouteSettings settings) {
