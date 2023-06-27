@@ -81,7 +81,7 @@ class ContentPreferScreen extends StatelessWidget {
           //Backdrop Glass
           Container(
             clipBehavior: Clip.antiAlias,
-            height: 150.h,
+            height: 95.h,
             decoration: const BoxDecoration(color: Colors.transparent),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),

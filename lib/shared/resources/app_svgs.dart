@@ -18,4 +18,9 @@ class AppSvgs {
       "assets/svgs/illustration_contact_sync.svg";
   static const illustrationSearchEmpty =
       "assets/svgs/illustration_search_empty.svg";
+
+  static const icHome = "assets/svgs/ic_home.svg";
+  static const icDiscover = "assets/svgs/ic_discover.svg";
+  static const icLists = "assets/svgs/ic_lists.svg";
+  static const icYou = "assets/svgs/ic_you.svg";
 }

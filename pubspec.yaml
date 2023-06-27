@@ -50,6 +50,7 @@ dependencies:
   pinput: ^2.2.31
   flutter_spinkit: ^5.2.0
   flag: ^7.0.0
+  video_player: ^2.6.1
 
 dev_dependencies:
   flutter_test:

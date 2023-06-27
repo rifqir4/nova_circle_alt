@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //After 1 second go to home
       await Future.delayed(const Duration(milliseconds: 1000)).then((_) {
         Navigator.pushNamedAndRemoveUntil(
-            context, AppRoutes.verifyPhone, (route) => false);
+            context, AppRoutes.intro, (route) => false);
       });
     });
   }
