@@ -72,7 +72,7 @@ class BottomNavbar extends StatelessWidget {
     //Changes variabel
 
     final color = isSelected ? AppColors.greyDarker : AppColors.grey;
-    final fontWeight = isSelected ? FontWeight.bold : FontWeight.w400;
+    final fontWeight = isSelected ? FontWeight.w700 : FontWeight.w400;
 
     return Container(
       width: 42.sp,
@@ -90,8 +90,8 @@ class BottomNavbar extends StatelessWidget {
           const Spacer(),
           Text(
             name,
-            style: AppTextStyles.primary.copyWith(
-                fontSize: 10.sp, color: color, fontWeight: fontWeight),
+            style: AppTextStyles.body4
+                .copyWith(color: color, fontWeight: fontWeight),
           ),
           const Spacer(),
         ],

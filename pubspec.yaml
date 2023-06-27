@@ -77,8 +77,34 @@ flutter:
     - assets/svgs/
     - assets/images/
     - assets/localization/
+    - assets/fonts/
+    - assets/fonts/inter/
+    - assets/fonts/area_inktrap/
     - assets/etc/
     - env/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/inter/Inter-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/inter/Inter-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: AreaInktrap
+      fonts:
+        - asset: assets/fonts/area_inktrap/AreaInktrap-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/area_inktrap/AreaInktrap-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/area_inktrap/AreaInktrap-Bold.ttf
+          weight: 700
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

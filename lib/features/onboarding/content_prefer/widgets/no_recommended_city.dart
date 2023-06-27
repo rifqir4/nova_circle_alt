@@ -22,12 +22,9 @@ class NoRecomendedCity extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 80.w),
             child: Text(
-              "No one has recommended this city yet. Explore the app and be the first one to add it!",
-              textAlign: TextAlign.center,
-              style: AppTextStyles.primary.copyWith(
-                fontSize: 10.sp,
-              ),
-            ),
+                "No one has recommended this city yet. Explore the app and be the first one to add it!",
+                textAlign: TextAlign.center,
+                style: AppTextStyles.body4),
           ),
           SpaceV(value: 30.h),
           Padding(

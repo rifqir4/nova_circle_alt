@@ -63,8 +63,7 @@ class ContactCard extends StatelessWidget {
                 side: BorderSide.none)),
         onPressed: () {},
         child: Text("Follow",
-            style: AppTextStyles.primary
-                .copyWith(fontSize: 10.sp, color: AppColors.greyDarker)),
+            style: AppTextStyles.body4.copyWith(color: AppColors.greyDarker)),
       ),
     );
   }

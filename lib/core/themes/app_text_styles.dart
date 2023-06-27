@@ -1,65 +1,98 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import './app_colors.dart';
 
 class AppTextStyles {
   AppTextStyles._();
 
-  static final primary = GoogleFonts.inter().copyWith(
-    color: AppColors.text,
+  static const inter = TextStyle(
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w400,
+    color: AppColors.greyDarker,
   );
 
-  static final title = primary.copyWith(
+  static final interItalic = inter.copyWith(
+    fontStyle: FontStyle.italic,
+  );
+
+  static final interBold = inter.copyWith(
+    fontWeight: FontWeight.w700,
+  );
+
+  static final interBoldItalic = interBold.copyWith(
+    fontStyle: FontStyle.italic,
+  );
+
+  static const areaInktrap = TextStyle(
+    fontFamily: "AreaInktrap",
+    fontWeight: FontWeight.w400,
+  );
+
+  static final areaInktrapSemibold = areaInktrap.copyWith(
+    fontWeight: FontWeight.w600,
+  );
+
+  static final areaInktrapBold = areaInktrap.copyWith(
+    fontWeight: FontWeight.w800,
+  );
+
+  static final title = areaInktrap.copyWith(
     fontSize: 24.sp,
     height: 1.1,
     color: AppColors.textTitle,
   );
 
-  static final titleBold = title.copyWith(
-    fontWeight: FontWeight.w700,
+  static final titleBold = areaInktrapBold.copyWith(
+    fontSize: 24.sp,
+    height: 1.1,
+    color: AppColors.textTitle,
   );
 
-  static final subtitle = primary.copyWith(
+  static final subtitle = areaInktrap.copyWith(
     fontSize: 18.sp,
     color: AppColors.textTitle,
   );
 
-  static final subtitleBold = subtitle.copyWith(
+  static final subtitleBold = areaInktrapBold.copyWith(
     fontWeight: FontWeight.w700,
   );
 
-  static final body1 = primary.copyWith(
+  //Inter
+
+  static final body1 = inter.copyWith(
     fontSize: 16.sp,
   );
 
-  static final body1Medium = body1.copyWith(
-    fontWeight: FontWeight.w500,
+  static final body1Bold = interBold.copyWith(
+    fontSize: 16.sp,
   );
 
-  static final body1Semibold = body1.copyWith(
-    fontWeight: FontWeight.w600,
-  );
-
-  static final body1Bold = body1.copyWith(
-    fontWeight: FontWeight.w900,
-  );
-
-  static final body2 = primary.copyWith(
+  static final body2 = inter.copyWith(
     fontSize: 14.sp,
     height: 1.2,
   );
 
-  static final body2Bold = body2.copyWith(
-    fontWeight: FontWeight.bold,
+  static final body2Bold = interBold.copyWith(
+    fontSize: 14.sp,
+    height: 1.2,
   );
 
-  static final body3 = primary.copyWith(
+  static final body3 = inter.copyWith(
     fontSize: 12.sp,
     height: 1.2,
   );
-  static final body3Bold = body3.copyWith(
-    fontWeight: FontWeight.bold,
+
+  static final body3Bold = interBold.copyWith(
+    fontSize: 12.sp,
+    height: 1.2,
+  );
+
+  static final body4 = inter.copyWith(
+    fontSize: 10.sp,
+  );
+
+  static final body4Bold = interBold.copyWith(
+    fontSize: 10.sp,
   );
 }
