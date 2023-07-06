@@ -16,7 +16,7 @@ class CityItem extends StatelessWidget {
         Stack(
           children: [
             AspectRatio(
-              aspectRatio: 9 / 16,
+              aspectRatio: 56 / 96,
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(1000),

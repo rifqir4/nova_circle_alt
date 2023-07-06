@@ -31,8 +31,7 @@ class ContentPreferScreen extends StatelessWidget {
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 5,
-                                    childAspectRatio: 2 / 5,
-                                    mainAxisExtent: 120.h,
+                                    childAspectRatio: 56 / 117,
                                     crossAxisSpacing: 12.w,
                                     mainAxisSpacing: 8.w),
                             itemBuilder: (context, idx) =>
