@@ -35,7 +35,7 @@ class CityItem extends StatelessWidget {
         ),
         SpaceV(value: 6.w),
         Text(
-          "New York",
+          "Palma de Mallorca",
           textAlign: TextAlign.center,
           style: AppTextStyles.body3,
         )

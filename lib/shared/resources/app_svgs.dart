@@ -23,4 +23,6 @@ class AppSvgs {
   static const icDiscover = "assets/svgs/ic_discover.svg";
   static const icLists = "assets/svgs/ic_lists.svg";
   static const icYou = "assets/svgs/ic_you.svg";
+  static const icSearch = "assets/svgs/ic_search.svg";
+  static const icClose = "assets/svgs/ic_close.svg";
 }

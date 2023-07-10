@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nova_circle_alt/core/themes/themes.dart';
+import 'package:nova_circle_alt/shared/resources/app_svgs.dart';
 
 class InputSearch extends StatefulWidget {
   const InputSearch({super.key, required this.controller});
@@ -48,7 +50,10 @@ class _InputSearchState extends State<InputSearch> {
           fillColor: AppColors.white,
           prefixIcon: Padding(
             padding: EdgeInsets.only(left: 12.w, right: 8.w),
-            child: const Icon(Icons.search, size: 32, color: AppColors.grey),
+            child: Padding(
+              padding: EdgeInsets.all(2.w),
+              child: SvgPicture.asset(AppSvgs.icSearch),
+            ),
           ),
           suffixIcon: isCloseVisible
               ? GestureDetector(
@@ -56,10 +61,10 @@ class _InputSearchState extends State<InputSearch> {
                     controller.clear();
                     isCloseVisible = false;
                   }),
-                  child: Padding(
+                  child: Container(
+                    color: Colors.transparent,
                     padding: EdgeInsets.only(left: 12.w, right: 12.w),
-                    child: const Icon(Icons.close,
-                        size: 32, color: AppColors.grey),
+                    child: SvgPicture.asset(AppSvgs.icClose),
                   ),
                 )
               : null,
