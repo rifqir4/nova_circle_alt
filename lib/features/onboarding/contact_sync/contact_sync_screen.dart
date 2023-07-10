@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nova_circle_alt/core/router/app_routes.dart';
 import 'package:nova_circle_alt/core/themes/themes.dart';
 import 'package:nova_circle_alt/features/onboarding/contact_sync/widgets/contact_card.dart';
+import 'package:nova_circle_alt/features/onboarding/contact_sync/widgets/selected_user_section.dart';
 
 import '../../../shared/widgets/widgets.dart';
 
@@ -23,6 +24,11 @@ class ContactSyncScreen extends StatelessWidget {
                   EdgeInsets.symmetric(horizontal: AppDimension.paddingScreen),
               child: CustomScrollView(
                 slivers: [
+                  SliverToBoxAdapter(child: SpaceV(value: 20.h)),
+                  //Discover selected user
+                  const SliverToBoxAdapter(child: SelectedUserSection()),
+
+                  //Contact header
                   SliverToBoxAdapter(child: _buildHeader()),
 
                   //Registered Contact
@@ -83,7 +89,7 @@ class ContactSyncScreen extends StatelessWidget {
   Widget _buildHeader() {
     return Padding(
       padding: EdgeInsets.only(
-        top: 20.h,
+        top: 40.h,
         bottom: 12.h,
       ),
       child: Text("Members of your gang are already here!",

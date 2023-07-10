@@ -4,6 +4,7 @@ export './button/button.dart';
 export './input/input_phone.dart';
 export './input/input_search.dart';
 export './item/city_item.dart';
+export './tile/tile.dart';
 export './loading.dart';
 export './space.dart';
 export './unfocus_wrap.dart';

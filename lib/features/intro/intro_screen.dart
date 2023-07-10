@@ -70,7 +70,7 @@ class _IntroScreenState extends State<IntroScreen> {
                           pageIndex = page;
                         });
                       },
-                      children: [Intro1(), Intro2(), Intro3()],
+                      children: const [Intro1(), Intro2(), Intro3()],
                     ))),
 
             //NOVA LOGO

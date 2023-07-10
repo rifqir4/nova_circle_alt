@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nova_circle_alt/core/themes/themes.dart';
+import 'package:nova_circle_alt/features/onboarding/contact_sync/widgets/button_follow.dart';
 import 'package:nova_circle_alt/shared/widgets/widgets.dart';
 
 class ContactCard extends StatelessWidget {
@@ -8,13 +9,7 @@ class ContactCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 12.w),
-      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.w),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(8.sp),
-      ),
+    return Tile(
       child: Row(
         children: [
           //Picture
@@ -42,28 +37,8 @@ class ContactCard extends StatelessWidget {
                   ))),
 
           //Button
-          _buildButton(),
+          const ButtonFollow(isFollow: true),
         ],
-      ),
-    );
-  }
-
-  Widget _buildButton() {
-    return SizedBox(
-      width: 60.w,
-      height: 22.h,
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-            elevation: 0,
-            backgroundColor: AppColors.greyLightest,
-            foregroundColor: AppColors.greyDarker,
-            side: BorderSide.none,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4.w),
-                side: BorderSide.none)),
-        onPressed: () {},
-        child: Text("Follow",
-            style: AppTextStyles.body4.copyWith(color: AppColors.greyDarker)),
       ),
     );
   }
