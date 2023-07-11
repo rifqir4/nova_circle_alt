@@ -19,10 +19,15 @@ class AppSvgs {
   static const illustrationSearchEmpty =
       "assets/svgs/illustration_search_empty.svg";
 
+  //NAVBAR ICON
   static const icHome = "assets/svgs/ic_home.svg";
+  static const icHomeOutlined = "assets/svgs/ic_home_outlined.svg";
   static const icDiscover = "assets/svgs/ic_discover.svg";
+  static const icDiscoverOutlined = "assets/svgs/ic_discover_outlined.svg";
   static const icLists = "assets/svgs/ic_lists.svg";
+  static const icListsOutlined = "assets/svgs/ic_lists_outlined.svg";
   static const icYou = "assets/svgs/ic_you.svg";
+  static const icYouOutlined = "assets/svgs/ic_you_outlined.svg";
   static const icSearch = "assets/svgs/ic_search.svg";
   static const icClose = "assets/svgs/ic_close.svg";
 }

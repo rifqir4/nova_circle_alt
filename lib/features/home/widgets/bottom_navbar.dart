@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,31 +18,35 @@ class BottomNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final botnavHeight = Platform.isAndroid ? 70.h : 85.h;
+
     return Container(
-      height: 85.h,
+      height: botnavHeight,
       decoration: BoxDecoration(color: AppColors.white, boxShadow: [
         BoxShadow(blurRadius: 12, color: AppColors.grey.withOpacity(0.5))
       ]),
       child: Column(
         children: [
-          const Spacer(),
+          SpaceV(value: 12.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 32.w),
+            padding: EdgeInsets.symmetric(horizontal: 18.w),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.feed),
                   child: _buildIcon(
                       name: "Feed",
-                      icon: AppSvgs.icHome,
+                      icon: AppSvgs.icHomeOutlined,
+                      iconSelected: AppSvgs.icHome,
                       isSelected: selected == HomePages.feed),
                 ),
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.discover),
                   child: _buildIcon(
                       name: "Discover",
-                      icon: AppSvgs.icDiscover,
+                      icon: AppSvgs.icDiscoverOutlined,
+                      iconSelected: AppSvgs.icDiscover,
                       isSelected: selected == HomePages.discover),
                 ),
                 _buildAddBtn(),
@@ -48,34 +54,37 @@ class BottomNavbar extends StatelessWidget {
                   onTap: () => onChange.call(HomePages.lists),
                   child: _buildIcon(
                       name: "Lists",
-                      icon: AppSvgs.icLists,
+                      icon: AppSvgs.icListsOutlined,
+                      iconSelected: AppSvgs.icLists,
                       isSelected: selected == HomePages.lists),
                 ),
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.you),
                   child: _buildIcon(
                       name: "you",
-                      icon: AppSvgs.icYou,
+                      icon: AppSvgs.icYouOutlined,
+                      iconSelected: AppSvgs.icYou,
                       isSelected: selected == HomePages.you),
                 ),
               ],
             ),
           ),
-          SpaceV(value: 40.h),
+          const Spacer(),
         ],
       ),
     );
   }
 
   Widget _buildIcon(
-      {required String name, required String icon, bool isSelected = false}) {
+      {required String name,
+      required String icon,
+      required String iconSelected,
+      bool isSelected = false}) {
     //Changes variabel
-
-    final color = isSelected ? AppColors.greyDarker : AppColors.grey;
-    final fontWeight = isSelected ? FontWeight.w700 : FontWeight.w400;
+    final iconWidget = isSelected ? iconSelected : icon;
 
     return Container(
-      width: 42.sp,
+      width: 50.sp,
       height: 42.sp,
       color: Colors.transparent,
       child: Column(
@@ -83,15 +92,15 @@ class BottomNavbar extends StatelessWidget {
           SizedBox(
             width: 26.sp,
             height: 26.sp,
-            child: SvgPicture.asset(icon,
+            child: SvgPicture.asset(iconWidget,
                 width: 26.sp,
-                colorFilter: ColorFilter.mode(color, BlendMode.srcIn)),
+                colorFilter:
+                    const ColorFilter.mode(AppColors.grey, BlendMode.srcIn)),
           ),
           const Spacer(),
           Text(
             name,
-            style: AppTextStyles.body4
-                .copyWith(color: color, fontWeight: fontWeight),
+            style: AppTextStyles.body4.copyWith(color: AppColors.grey),
           ),
           const Spacer(),
         ],
@@ -101,6 +110,7 @@ class BottomNavbar extends StatelessWidget {
 
   Widget _buildAddBtn() {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 12.w),
       width: 42.sp,
       height: 42.sp,
       decoration: BoxDecoration(
