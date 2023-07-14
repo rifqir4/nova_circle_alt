@@ -38,6 +38,8 @@ class AppRouter {
         return AppScreens.budgetSelection();
       case AppRoutes.home:
         return AppScreens.home(settings);
+      case AppRoutes.addNewList:
+        return AppScreens.addNewList(settings);
       default:
         return AppScreens.undefined(settings);
     }

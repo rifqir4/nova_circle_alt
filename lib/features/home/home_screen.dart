@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nova_circle_alt/features/home/widgets/explore_navigator.dart';
+import 'package:nova_circle_alt/features/home/widgets/lists_navigator.dart';
 
 import 'widgets/bottom_navbar.dart';
 
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final listPage = {
     HomePages.explore: const ExploreNavigator(),
     HomePages.discover: const ExamplePage(name: "Discover Page"),
-    HomePages.lists: const ExamplePage(name: "Lists"),
+    HomePages.lists: const ListsNavigator(),
     HomePages.you: const ExamplePage(name: "you")
   };
 

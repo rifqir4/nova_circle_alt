@@ -18,4 +18,6 @@ class AppRoutes {
   static const String contactSync = '/onboarding/contact/sync';
   static const String contentPrefer = '/onboarding/content/prefer';
   static const String budgetSelection = '/onboarding/budget-selection';
+
+  static const String addNewList = '/lists/add-new-list';
 }

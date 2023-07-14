@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nova_circle_alt/features/lists/add_new_list/add_new_list_screen.dart';
 import 'package:nova_circle_alt/features/onboarding/budget_selection/budget_selection_screen.dart';
 
 import '../../features/onboarding/agreement/agreement_screen.dart';
@@ -85,5 +86,9 @@ class AppScreens {
 
   static Route<dynamic> home(RouteSettings settings) {
     return MaterialPageRoute(builder: (_) => const HomeScreen());
+  }
+
+  static Route<dynamic> addNewList(RouteSettings settings) {
+    return MaterialPageRoute(builder: (_) => const AddNewListScreen());
   }
 }

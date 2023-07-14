@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:nova_circle_alt/core/themes/app_colors.dart';
+import 'package:nova_circle_alt/core/utils/app_global.dart';
 import 'package:nova_circle_alt/core/utils/app_log.dart';
 import 'package:nova_circle_alt/features/explore/city/widgets/city_header.dart';
+import 'package:nova_circle_alt/shared/widgets/button/button_back.dart';
+import 'package:nova_circle_alt/shared/widgets/custom_appbar.dart';
 
 class CityIntro extends StatefulWidget {
   const CityIntro({super.key});
@@ -54,7 +58,17 @@ class _CityIntroState extends State<CityIntro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.transparent,
+      appBar: CustomAppBar(
+        leading: ButtonBack(
+          foregroundColor: AppColors.white,
+          onPressed: () {
+            exploreNavigatorKey.currentState!.pop();
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       body: Builder(builder: (context) {
         final size = MediaQuery.of(context).size;
         final rotatedMatrix = Matrix4.identity();
@@ -79,10 +93,5 @@ class _CityIntroState extends State<CityIntro> {
         );
       }),
     );
-  }
-
-  Widget _buildAppBar() {
-    return const Row(
-        children: [Icon(Icons.arrow_back), Spacer(), Icon(Icons.share)]);
   }
 }
