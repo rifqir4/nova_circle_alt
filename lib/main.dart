@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nova_circle_alt/core/utils/app_global.dart';
 
 import './core/config/flavor_config.dart';
 import './core/config/dependency_injection.dart';
@@ -60,6 +61,7 @@ class NovaApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 667),
       builder: (context, child) => MaterialApp(
+        navigatorKey: mainNavigatorKey,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,

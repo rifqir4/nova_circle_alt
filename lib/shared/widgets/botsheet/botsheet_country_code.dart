@@ -6,6 +6,7 @@ import '../../../core/themes/themes.dart';
 import '../../model/country_code.dart';
 import '../../resources/country_codes.dart';
 import '../loading.dart';
+import 'botsheet_template.dart';
 
 class BotSheetCountryCode extends StatefulWidget {
   const BotSheetCountryCode({super.key, required this.initialValue});
@@ -36,70 +37,51 @@ class _BotSheetCountryCodeState extends State<BotSheetCountryCode> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.only(),
-        decoration: BoxDecoration(
-            color: AppColors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(16.w),
-              topRight: Radius.circular(16.w),
-            )),
-        child: Column(
-          children: [
-            Center(
-                child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 18.w),
-                    width: 32.w,
-                    height: 5.h,
-                    decoration: BoxDecoration(
-                      color: AppColors.grey,
-                      borderRadius: BorderRadius.circular(100),
-                    ))),
-            Expanded(
-              child: FutureBuilder(
-                  future: Future.delayed(const Duration(milliseconds: 500)),
-                  builder: (context, snap) {
-                    if (snap.connectionState != ConnectionState.done) {
-                      return const Loading();
-                    }
+    return BotsheetTemplate(
+      child: FutureBuilder(
+        future: Future.delayed(const Duration(milliseconds: 500)),
+        builder: (context, snap) {
+          if (snap.connectionState != ConnectionState.done) {
+            return const Loading();
+          }
 
-                    return ListView.builder(
-                        physics: const BouncingScrollPhysics(),
-                        controller: controller,
-                        itemCount: listCountryCode.length,
-                        itemBuilder: (context, idx) {
-                          final data = listCountryCode[idx];
-                          final code = data.code;
-                          final dialCode = data.dialCode;
-                          final name = data.name;
+          return ListView.builder(
+            physics: const BouncingScrollPhysics(),
+            controller: controller,
+            itemCount: listCountryCode.length,
+            itemBuilder: (context, idx) {
+              final data = listCountryCode[idx];
+              final code = data.code;
+              final dialCode = data.dialCode;
+              final name = data.name;
 
-                          return GestureDetector(
-                            onTap: () => Navigator.of(context).pop(data),
-                            child: SizedBox(
-                              height: tileHeight,
-                              width: double.infinity,
-                              child: Row(children: [
-                                Container(
-                                    clipBehavior: Clip.antiAlias,
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 16.w),
-                                    width: 32.w,
-                                    height: 24.w,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5.w),
-                                    ),
-                                    child: Flag.fromString(code,
-                                        fit: BoxFit.cover)),
-                                Expanded(
-                                    child: Text("$name ($dialCode)",
-                                        style: AppTextStyles.body2))
-                              ]),
-                            ),
-                          );
-                        });
-                  }),
-            ),
-          ],
-        ));
+              return GestureDetector(
+                onTap: () => Navigator.of(context).pop(data),
+                child: SizedBox(
+                  height: tileHeight,
+                  width: double.infinity,
+                  child: Row(
+                    children: [
+                      Container(
+                          clipBehavior: Clip.antiAlias,
+                          margin: EdgeInsets.symmetric(horizontal: 16.w),
+                          width: 32.w,
+                          height: 24.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.w),
+                          ),
+                          child: Flag.fromString(code, fit: BoxFit.cover)),
+                      Expanded(
+                          child: Text("$name ($dialCode)",
+                              style: AppTextStyles.body2))
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
   }
 }

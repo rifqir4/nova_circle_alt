@@ -8,4 +8,8 @@ class AppDimension {
   static double paddingInputHorizontal = 20;
 
   static double illustrationWidth = 90.w;
+
+  static double feedItemRatio = 162.w / 220.w;
+  static double spotItemRatio = 162.w / 137.w;
+  static double recommendedItemRatio = 162.w / 180.w;
 }

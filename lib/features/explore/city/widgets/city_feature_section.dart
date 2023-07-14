@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nova_circle_alt/shared/widgets/item/recommend_item.dart';
+
+import '../../../../core/themes/themes.dart';
+
+class CityFeatureSection extends StatelessWidget {
+  const CityFeatureSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: AppDimension.paddingScreen),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildHeader(),
+          GridView.builder(
+            shrinkWrap: true,
+            primary: false,
+            padding: EdgeInsets.zero,
+            itemCount: 11,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: AppDimension.recommendedItemRatio,
+                crossAxisSpacing: 20.w,
+                mainAxisSpacing: 20.w),
+            itemBuilder: (context, index) {
+              return const RecommendItem();
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Padding(
+      padding: EdgeInsets.only(top: 32.h, bottom: 12.h),
+      child: Text(
+        "Feature",
+        style: AppTextStyles.subtitle,
+      ),
+    );
+  }
+}

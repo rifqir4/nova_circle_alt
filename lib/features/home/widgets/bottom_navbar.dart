@@ -7,7 +7,7 @@ import 'package:nova_circle_alt/core/themes/themes.dart';
 import 'package:nova_circle_alt/shared/resources/app_svgs.dart';
 import 'package:nova_circle_alt/shared/widgets/widgets.dart';
 
-enum HomePages { feed, discover, lists, you }
+enum HomePages { explore, discover, lists, you }
 
 class BottomNavbar extends StatelessWidget {
   const BottomNavbar(
@@ -34,12 +34,12 @@ class BottomNavbar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  onTap: () => onChange.call(HomePages.feed),
+                  onTap: () => onChange.call(HomePages.explore),
                   child: _buildIcon(
                       name: "Feed",
                       icon: AppSvgs.icHomeOutlined,
                       iconSelected: AppSvgs.icHome,
-                      isSelected: selected == HomePages.feed),
+                      isSelected: selected == HomePages.explore),
                 ),
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.discover),

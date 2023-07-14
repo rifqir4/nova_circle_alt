@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nova_circle_alt/features/home/widgets/bottom_navbar.dart';
+import 'package:nova_circle_alt/features/home/widgets/explore_navigator.dart';
+
+import 'widgets/bottom_navbar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,10 +11,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  HomePages selectedPage = HomePages.feed;
+  HomePages selectedPage = HomePages.explore;
 
   final listPage = {
-    HomePages.feed: const ExamplePage(name: "Feed Page"),
+    HomePages.explore: const ExploreNavigator(),
     HomePages.discover: const ExamplePage(name: "Discover Page"),
     HomePages.lists: const ExamplePage(name: "Lists"),
     HomePages.you: const ExamplePage(name: "you")
@@ -20,12 +22,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      body: listPage[selectedPage] as Widget,
-      bottomNavigationBar: BottomNavbar(
-          selected: selectedPage,
-          onChange: (selected) => setState(() => selectedPage = selected)),
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        body: listPage[selectedPage] as Widget,
+        bottomNavigationBar: BottomNavbar(
+            selected: selectedPage,
+            onChange: (selected) => setState(() => selectedPage = selected)),
+      ),
     );
   }
 }

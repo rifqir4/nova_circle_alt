@@ -54,7 +54,7 @@ class AppTextStyles {
     color: AppColors.textTitle,
   );
 
-  static final subtitleBold = areaInktrapBold.copyWith(
+  static final subtitleBold = subtitle.copyWith(
     fontWeight: FontWeight.w700,
   );
 
