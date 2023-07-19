@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nova_circle_alt/features/discover/get_inspired/get_inspired_screen.dart';
-import 'package:nova_circle_alt/features/discover/preview/preview_screen.dart';
+import 'package:nova_circle_alt/features/discover/preview/story_wrapper_screen.dart';
 import 'package:nova_circle_alt/features/profile/user_edit/user_edit_screen.dart';
 import 'package:nova_circle_alt/features/profile/user_settings/user_settings_screen.dart';
 
@@ -90,7 +90,8 @@ class AppRouter {
       case AppRoutes.getInspiredScreen:
         screen = const GetInspiredScreen();
       case AppRoutes.previewScreen:
-        screen = const PreviewScreen();
+        // screen = const PreviewScreen();
+        screen = const StoryWrapperScreen();
 
       //List
       case AppRoutes.myListsScreen:
