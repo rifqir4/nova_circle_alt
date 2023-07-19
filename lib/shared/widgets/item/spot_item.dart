@@ -42,7 +42,7 @@ class SpotItem extends StatelessWidget {
                   Align(
                     alignment: Alignment.topRight,
                     child: SvgPicture.asset(
-                      AppSvgs.icDiscoverOutlined,
+                      AppSvgs.icFlag,
                       width: 18.w,
                       colorFilter: const ColorFilter.mode(
                           AppColors.white, BlendMode.srcIn),

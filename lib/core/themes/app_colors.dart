@@ -10,6 +10,7 @@ class AppColors {
   //APP COLOR
   static const Color blueSky = Color(0xFF00496D);
   static const Color blueSkyLight = Color(0xFF336D8A);
+  static const Color blueSkyLighter = Color(0xFF99B6C5);
   static const Color blueSkyLightest = Color(0xFFE6EDF0);
   static const Color greyDarkest = Color(0xFF404B59);
   static const Color greyDarker = Color(0xFF6E7A89);

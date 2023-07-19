@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nova_circle_alt/core/router/app_nav.dart';
 import 'package:nova_circle_alt/core/themes/themes.dart';
-import 'package:nova_circle_alt/core/utils/app_global.dart';
 import 'package:nova_circle_alt/shared/widgets/widgets.dart';
 
 class CircleListScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class CircleListScreen extends StatelessWidget {
       appBar: CustomAppBar(
         titleText: "My Circle List",
         leading: ButtonBack(
-          onPressed: () => exploreNavigatorKey.currentState?.pop(),
+          onPressed: () => AppNav.back(),
         ),
       ),
       body: CustomScrollView(

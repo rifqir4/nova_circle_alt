@@ -37,16 +37,16 @@ class BottomNavbar extends StatelessWidget {
                   onTap: () => onChange.call(HomePages.explore),
                   child: _buildIcon(
                       name: "Feed",
-                      icon: AppSvgs.icHomeOutlined,
-                      iconSelected: AppSvgs.icHome,
+                      icon: AppSvgs.icHome,
+                      iconSelected: AppSvgs.icHomeFill,
                       isSelected: selected == HomePages.explore),
                 ),
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.discover),
                   child: _buildIcon(
                       name: "Discover",
-                      icon: AppSvgs.icDiscoverOutlined,
-                      iconSelected: AppSvgs.icDiscover,
+                      icon: AppSvgs.icFlag,
+                      iconSelected: AppSvgs.icFlagFill,
                       isSelected: selected == HomePages.discover),
                 ),
                 _buildAddBtn(),
@@ -54,16 +54,16 @@ class BottomNavbar extends StatelessWidget {
                   onTap: () => onChange.call(HomePages.lists),
                   child: _buildIcon(
                       name: "Lists",
-                      icon: AppSvgs.icListsOutlined,
-                      iconSelected: AppSvgs.icLists,
+                      icon: AppSvgs.icDocument,
+                      iconSelected: AppSvgs.icDocumentFill,
                       isSelected: selected == HomePages.lists),
                 ),
                 GestureDetector(
                   onTap: () => onChange.call(HomePages.you),
                   child: _buildIcon(
                       name: "you",
-                      icon: AppSvgs.icYouOutlined,
-                      iconSelected: AppSvgs.icYou,
+                      icon: AppSvgs.icUser,
+                      iconSelected: AppSvgs.icUserFill,
                       isSelected: selected == HomePages.you),
                 ),
               ],

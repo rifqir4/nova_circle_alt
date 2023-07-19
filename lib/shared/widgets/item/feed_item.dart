@@ -51,7 +51,7 @@ class FeedItem extends StatelessWidget {
                                 .copyWith(color: AppColors.white)),
                       ),
                       SvgPicture.asset(
-                        AppSvgs.icListsOutlined,
+                        AppSvgs.icDocument,
                         width: 18.w,
                         colorFilter: const ColorFilter.mode(
                             AppColors.white, BlendMode.srcIn),

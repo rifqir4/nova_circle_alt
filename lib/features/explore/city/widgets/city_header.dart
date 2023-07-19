@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nova_circle_alt/core/utils/app_botsheet.dart';
+import 'package:nova_circle_alt/shared/resources/app_svgs.dart';
+import 'package:spring/spring.dart';
 
 import '../../../../core/themes/themes.dart';
 import '../../../../shared/resources/app_images.dart';
@@ -27,7 +30,7 @@ class CityHeader extends StatelessWidget {
             Positioned(
               bottom: 0,
               child: Container(
-                height: constraint.maxHeight * 0.5,
+                height: constraint.maxHeight * 0.45,
                 width: constraint.maxWidth,
                 padding: EdgeInsets.symmetric(
                   horizontal: AppDimension.paddingScreen,
@@ -103,12 +106,29 @@ class CityHeader extends StatelessWidget {
                               style: AppTextStyles.body3
                                   .copyWith(color: AppColors.white),
                             ),
-                            const Icon(Icons.arrow_drop_down,
-                                color: Colors.white),
+                            const SpaceV(value: 5),
+                            Spring.slide(
+                              cutomTweenOffset: Tween(
+                                  begin: const Offset(0, -5),
+                                  end: const Offset(0, 0)),
+                              slideType: SlideType.slide_in_top,
+                              animDuration: const Duration(seconds: 1),
+                              curve: Curves.linear,
+                              springController:
+                                  SpringController(initialAnim: Motion.loop),
+                              child: SvgPicture.asset(
+                                AppSvgs.icChevDown,
+                                width: 14.w,
+                                colorFilter: const ColorFilter.mode(
+                                  AppColors.white,
+                                  BlendMode.srcIn,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                      SpaceV(value: 40.h),
+                      SpaceV(value: 35.h),
                     ],
 
                     if (!isIntro) SpaceV(value: 30.h),

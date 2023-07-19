@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nova_circle_alt/core/utils/app_global.dart';
-import 'package:nova_circle_alt/features/explore/city/widgets/city_intro.dart';
 import 'package:nova_circle_alt/features/explore/feed/widgets/feature_section.dart';
 import 'package:nova_circle_alt/features/explore/feed/widgets/my_circle_section.dart';
 import 'package:nova_circle_alt/features/explore/feed/widgets/trending_spots_section.dart';
-import 'package:nova_circle_alt/features/home/widgets/explore_navigator.dart';
 
+import '../../../core/router/router.dart';
 import '../../../core/themes/themes.dart';
 import '../../../shared/widgets/widgets.dart';
 
@@ -47,17 +45,17 @@ class FeedScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return CityItem(
                         onTap: () {
-                          showGeneralDialog(
-                              context: context,
-                              barrierColor: Colors.transparent,
-                              barrierDismissible: false,
-                              transitionDuration:
-                                  const Duration(milliseconds: 250),
-                              pageBuilder: (ctx, _, __) => const CityIntro());
+                          // showGeneralDialog(
+                          //     context: context,
+                          //     barrierColor: Colors.transparent,
+                          //     barrierDismissible: false,
+                          //     transitionDuration:
+                          //         const Duration(milliseconds: 250),
+                          //     pageBuilder: (ctx, _, __) => const CityIntro());
 
-                          Future.delayed(const Duration(milliseconds: 250))
-                              .then((value) => exploreNavigatorKey.currentState!
-                                  .pushNamed(ExploreRoute.cityScreen));
+                          //     Navigator.pushNamed(context, routeName)
+
+                          AppNav.push(AppRoutes.cityScreen);
                         },
                       );
                     },

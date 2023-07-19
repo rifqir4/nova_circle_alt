@@ -37,7 +37,7 @@ class ButtonBack extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(8.w),
               child: SvgPicture.asset(
-                AppSvgs.icArrowBack,
+                AppSvgs.icArrowLeft,
                 colorFilter: ColorFilter.mode(fgColor, BlendMode.srcIn),
               ),
             ),

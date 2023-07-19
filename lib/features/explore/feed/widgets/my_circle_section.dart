@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/router/router.dart';
 import '../../../../core/themes/themes.dart';
-import '../../../../core/utils/app_global.dart';
 import '../../../../shared/widgets/widgets.dart';
-import '../../../home/widgets/explore_navigator.dart';
 
 class MyCircleSection extends StatelessWidget {
   const MyCircleSection({super.key});
@@ -57,8 +56,7 @@ class MyCircleSection extends StatelessWidget {
                   AppTextStyles.body2.copyWith(color: AppColors.greyDarkest),
               paddingVertical: 0,
               onPressed: () {
-                exploreNavigatorKey.currentState!
-                    .pushNamed(ExploreRoute.circleListScreen);
+                AppNav.push(AppRoutes.circleListScreen);
               },
             ),
           ),

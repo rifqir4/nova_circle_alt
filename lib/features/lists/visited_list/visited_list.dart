@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nova_circle_alt/core/router/app_nav.dart';
 
 import '../../../core/themes/themes.dart';
 import '../../../core/utils/app_botsheet.dart';
-import '../../../core/utils/app_global.dart';
 import '../../../shared/resources/app_svgs.dart';
 import '../../../shared/widgets/widgets.dart';
 
@@ -17,7 +17,7 @@ class VisitedListScreen extends StatelessWidget {
       appBar: CustomAppBar(
         titleText: "Spot I Visited",
         leading: ButtonBack(
-          onPressed: () => listsNavigatorKey.currentState?.pop(),
+          onPressed: () => AppNav.back(),
         ),
         actions: [
           IconButton(

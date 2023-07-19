@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nova_circle_alt/core/router/app_nav.dart';
 import 'package:nova_circle_alt/core/router/app_routes.dart';
 import 'package:nova_circle_alt/core/themes/themes.dart';
 import 'package:nova_circle_alt/core/utils/app_global.dart';
@@ -8,8 +9,6 @@ import 'package:nova_circle_alt/shared/resources/app_svgs.dart';
 import 'package:nova_circle_alt/shared/widgets/button/button_text.dart';
 import 'package:nova_circle_alt/shared/widgets/custom_appbar.dart';
 import 'package:nova_circle_alt/shared/widgets/space.dart';
-
-import '../../home/widgets/lists_navigator.dart';
 
 class MyListsScreen extends StatelessWidget {
   const MyListsScreen({super.key});
@@ -37,8 +36,7 @@ class MyListsScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      listsNavigatorKey.currentState
-                          ?.pushNamed(ListsRoute.wishListScreen);
+                      AppNav.push(AppRoutes.wishListScreen);
                     },
                     child: _buildItem(
                         title: "Wishlist", subtitle: "My Circle | 13 Spots"),
@@ -46,8 +44,7 @@ class MyListsScreen extends StatelessWidget {
                   SpaceV(value: 8.h),
                   GestureDetector(
                     onTap: () {
-                      listsNavigatorKey.currentState
-                          ?.pushNamed(ListsRoute.visitedListScreen);
+                      AppNav.push(AppRoutes.visitedListScreen);
                     },
                     child: _buildItem(
                         title: "Visited", subtitle: "My Circle | 10 Spots"),
@@ -113,7 +110,7 @@ class MyListsScreen extends StatelessWidget {
                 height: 24.w,
                 width: 24.w,
                 child: SvgPicture.asset(
-                  AppSvgs.icListsOutlined,
+                  AppSvgs.icDocument,
                   colorFilter:
                       const ColorFilter.mode(AppColors.sunset, BlendMode.srcIn),
                 ),

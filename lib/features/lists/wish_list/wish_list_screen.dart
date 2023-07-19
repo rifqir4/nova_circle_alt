@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nova_circle_alt/core/router/app_nav.dart';
 import 'package:nova_circle_alt/core/utils/app_botsheet.dart';
-import 'package:nova_circle_alt/core/utils/app_global.dart';
 import 'package:nova_circle_alt/shared/resources/app_svgs.dart';
 import 'package:nova_circle_alt/shared/widgets/item/recommend_item.dart';
 
@@ -18,7 +18,7 @@ class WishListScreen extends StatelessWidget {
       appBar: CustomAppBar(
         titleText: "Wishlist",
         leading: ButtonBack(
-          onPressed: () => listsNavigatorKey.currentState?.pop(),
+          onPressed: () => AppNav.back(),
         ),
         actions: [
           IconButton(

@@ -4,11 +4,8 @@ import 'package:nova_circle_alt/core/themes/app_colors.dart';
 import 'package:nova_circle_alt/core/themes/app_dimension.dart';
 import 'package:nova_circle_alt/core/themes/app_text_styles.dart';
 import 'package:nova_circle_alt/core/utils/app_global.dart';
-import 'package:nova_circle_alt/shared/widgets/button/button.dart';
-import 'package:nova_circle_alt/shared/widgets/button/button_back.dart';
-import 'package:nova_circle_alt/shared/widgets/button/button_text.dart';
-import 'package:nova_circle_alt/shared/widgets/custom_appbar.dart';
-import 'package:nova_circle_alt/shared/widgets/space.dart';
+
+import '../../../shared/widgets/widgets.dart';
 
 class AddNewListScreen extends StatelessWidget {
   const AddNewListScreen({super.key});
@@ -62,11 +59,70 @@ class AddNewListScreen extends StatelessWidget {
                 ),
               ),
               const SpaceV(),
+              SpaceV(value: 20.h),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "List title",
+                    style: AppTextStyles.body3.copyWith(
+                      color: AppColors.greyDarkest,
+                    ),
+                  ),
+                  SpaceV(value: 8.w),
+                  const InputText(
+                    hintText: "My newest list",
+                  ),
+                ],
+              ),
+              SpaceV(value: 20.h),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "List description (optional)",
+                    style: AppTextStyles.body3.copyWith(
+                      color: AppColors.greyDarkest,
+                    ),
+                  ),
+                  SpaceV(value: 8.w),
+                  const InputText(
+                    hintText: "Lorem Ipsum",
+                  ),
+                ],
+              ),
+              SpaceV(value: 20.h),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "Public selection",
+                    style: AppTextStyles.body3.copyWith(
+                      color: AppColors.greyDarkest,
+                    ),
+                  ),
+                  SpaceV(value: 8.w),
+                  InputDropdown(
+                    value: "Public",
+                    items: [
+                      InputDropdownData(name: "My Circle", value: "My Circle"),
+                      InputDropdownData(name: "Public", value: "Public"),
+                      InputDropdownData(name: "Private", value: "Private"),
+                    ],
+                    onChanged: (value) {},
+                  ),
+                ],
+              ),
+              SpaceV(value: 40.h),
               Button(title: "Save", onPressed: () {}),
               ButtonText(
                   title: "Cancel",
                   textStyle: AppTextStyles.body2Bold,
-                  onPressed: () {})
+                  onPressed: () {}),
+              SpaceV(value: 40.h),
             ],
           ),
         ),

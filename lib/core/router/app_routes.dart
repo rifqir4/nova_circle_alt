@@ -19,5 +19,23 @@ class AppRoutes {
   static const String contentPrefer = '/onboarding/content/prefer';
   static const String budgetSelection = '/onboarding/budget-selection';
 
+  //Explore
+  static const String feedScreen = "/explore/feed";
+  static const String circleListScreen = "/explore/circlelist";
+  static const String cityScreen = "/explore/city";
+
+  //Discover
+  static const String getInspiredScreen = "/discover/getinspired";
+  static const String previewScreen = "/discover/preview";
+
+  //Lists
+  static const String myListsScreen = "/lists/myList";
+  static const String wishListScreen = "/lists/wishlist";
+  static const String visitedListScreen = "/lists/visitedlist";
   static const String addNewList = '/lists/add-new-list';
+
+  //Profile
+  static const String profileUserScreen = "/profile/user";
+  static const String profileSettingsScreen = "/profile/settings";
+  static const String profileEditScreen = "/profile/edit";
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nova_circle_alt/features/home/widgets/explore_navigator.dart';
-import 'package:nova_circle_alt/features/home/widgets/lists_navigator.dart';
+import 'package:nova_circle_alt/features/discover/get_inspired/get_inspired_screen.dart';
+import 'package:nova_circle_alt/features/explore/feed/feed_screen.dart';
+import 'package:nova_circle_alt/features/lists/my_list/my_lists_screen.dart';
+import 'package:nova_circle_alt/features/profile/user_profile/user_profile_screen.dart';
 
 import 'widgets/bottom_navbar.dart';
 
@@ -15,10 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
   HomePages selectedPage = HomePages.explore;
 
   final listPage = {
-    HomePages.explore: const ExploreNavigator(),
-    HomePages.discover: const ExamplePage(name: "Discover Page"),
-    HomePages.lists: const ListsNavigator(),
-    HomePages.you: const ExamplePage(name: "you")
+    HomePages.explore: const FeedScreen(),
+    HomePages.discover: const GetInspiredScreen(),
+    HomePages.lists: const MyListsScreen(),
+    HomePages.you: const UserProfileScreen()
   };
 
   @override
@@ -34,19 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
             selected: selectedPage,
             onChange: (selected) => setState(() => selectedPage = selected)),
       ),
-    );
-  }
-}
-
-class ExamplePage extends StatelessWidget {
-  const ExamplePage({super.key, required this.name});
-
-  final String name;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text(name)),
     );
   }
 }

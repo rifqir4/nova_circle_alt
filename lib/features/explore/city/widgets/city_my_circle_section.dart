@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nova_circle_alt/shared/widgets/item/recommend_item.dart';
 
 import '../../../../core/themes/themes.dart';
-import '../../../../core/utils/app_global.dart';
 import '../../../../shared/widgets/widgets.dart';
-import '../../../home/widgets/explore_navigator.dart';
 
 class CityMyCircleSection extends StatelessWidget {
   const CityMyCircleSection({super.key});
@@ -58,10 +56,7 @@ class CityMyCircleSection extends StatelessWidget {
               textStyle:
                   AppTextStyles.body2.copyWith(color: AppColors.greyDarkest),
               paddingVertical: 0,
-              onPressed: () {
-                exploreNavigatorKey.currentState!
-                    .pushNamed(ExploreRoute.circleListScreen);
-              },
+              onPressed: () {},
             ),
           ),
         ],
